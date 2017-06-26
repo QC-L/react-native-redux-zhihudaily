@@ -45,19 +45,22 @@ export default class HomeNav extends Component {
     };
     let styles = StyleSheet.create({
       statusBar: {
-        backgroundColor: theme.colors.statusBar
+        backgroundColor: theme.colors.titleBar
       },
       navBar: {
         backgroundColor: theme.colors.titleBar,
-        height: 50,
+        height: 44,
         paddingLeft: 15
       },
       buttonText: {
         color: '#rgba(255, 255, 255, 1)'
       },
       navButton:{
-        marginTop: 20,
+        marginTop: 10,
         flex: 1
+      },
+      navButtonGroup: {
+        marginTop: 10
       },
       icon:{
         width:30,
@@ -78,12 +81,12 @@ export default class HomeNav extends Component {
           {this.props.zhihu.title}
         </NavTitle>
         <NavGroup>
-          <NavButton style={styles.navButton}>
+          <NavButton style={styles.navButtonGroup}> 
             <NavButtonText style={styles.buttonText}>
               <Image style={styles.icon} source={require('../img/ic_message_white.png')} resizeMode={'contain'}/>
             </NavButtonText>
           </NavButton>
-          <NavButton style={styles.navButton} onPress={()=>{this.showActionSheet(this.props)}}>
+          <NavButton style={styles.navButtonGroup} onPress={()=>{this.showActionSheet(this.props)}}>
             <NavButtonText style={styles.buttonText}>
               <Image style={styles.icon} source={require('../img/ic_more_white.png')} resizeMode={'contain'}/>
             </NavButtonText>

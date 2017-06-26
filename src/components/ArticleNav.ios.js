@@ -9,11 +9,11 @@ export default class ArticleNav extends Component {
     let theme = new Theme(this.props.zhihu.theme);
     let styles = StyleSheet.create({
       statusBar: {
-        backgroundColor: theme.colors.statusBar
+        backgroundColor: theme.colors.titleBar
       },
       navBar: {
         backgroundColor: theme.colors.titleBar,
-        height: 50,
+        height: 44,
         paddingLeft: 0
       },
       buttonText: {
@@ -24,8 +24,11 @@ export default class ArticleNav extends Component {
         alignSelf:'center',fontSize:15,color:'white'
       },
       navButton:{
-        marginTop: 20,
+        marginTop: 10,
         flex: 1
+      },
+      navButtonIcon: {
+        marginTop: 10
       },
       icon:{
         width:30,
@@ -43,17 +46,17 @@ export default class ArticleNav extends Component {
           </NavButtonText>
         </NavButton>
         <NavGroup>
-          <NavButton style={styles.navButton}>
+          <NavButton style={styles.navButtonIcon}>
             <NavButtonText style={styles.buttonText}>
               <Image style={styles.icon} source={require('../img/ic_share_white.png')} resizeMode={'contain'}/>
             </NavButtonText>
           </NavButton>
-          <NavButton style={styles.navButton}>
+          <NavButton style={styles.navButtonIcon}>
             <NavButtonText style={styles.buttonText}>
               <Image style={styles.icon} source={require('../img/ic_collect_white.png')} resizeMode={'contain'}/>
             </NavButtonText>
           </NavButton>
-          <NavButton style={styles.navButton}>
+          <NavButton style={styles.navButtonIcon}>
             <NavButtonText style={styles.buttonText}>
               <Image style={styles.icon} source={require('../img/ic_comment_white.png')} resizeMode={'contain'}/>
             </NavButtonText>

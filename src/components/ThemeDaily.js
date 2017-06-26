@@ -71,7 +71,7 @@ export default class ThemeDaily extends Component {
     let {zhihu,refreshThemeArticles} = this.props;
     let img = require('../img/splash_black.png');
     //if (Platform.OS==='ios') { img = {uri:zhihu.themeDaily.background}; }
-    
+
     //文章列表
     let list = null;
     if (zhihu.themeDaily&&zhihu.themeDaily.stories) {
@@ -109,7 +109,7 @@ export default class ThemeDaily extends Component {
               progressBackgroundColor="#fff"
             />
           }>
-          <Image source={img} style={{height:240,backgroundColor:'#343434'}} resizeMode="cover">
+          <Image source={img} style={{height:240, backgroundColor: '#rgba(0,0,0,0.3)'}} resizeMode="cover">
             <Text style={styles.title}>{zhihu.themeDaily.description}</Text>
           </Image>
           <Touch onPress={()=>{this.props.onNavigate({type:'push',key:'editors'})}}>
@@ -132,7 +132,7 @@ const styles = StyleSheet.create({
   shadow: {
     opacity:0.5,
     backgroundColor:'#000',
-    top:25,
+    top:0,
     left:0,
     width,
     height,

@@ -21,7 +21,8 @@ export default class MySwiper extends Component {
     if (topArticles) {
       topArticles.forEach(function (v, k) {
         slides.push(
-          <TouchableHighlight key={k} style={styles.slide} onPress={() => {this.props.fetchArticleContentAndExtra(v.id)}}>
+          <TouchableHighlight key={k} style={styles.slide} onPress={() => {
+            this.props.fetchArticleContentAndExtra(v.id)}}>
             <Image source={{uri:v.image}} style={styles.slide} resizeMode="cover">
               <View style={styles.shadow}/>
               <Text style={styles.title}>{v.title}</Text>
@@ -52,7 +53,10 @@ const styles = StyleSheet.create({
   wrapper: {
   },
   shadow:{
-    backgroundColor:'#333',opacity:0.3,top:170,height:70
+    opacity:0.3,
+    top:165,
+    height:75,
+    backgroundColor: '#000000',
   },
   title:{
     top:100,
@@ -62,7 +66,6 @@ const styles = StyleSheet.create({
     fontSize:20
   },
   slide: {
-    flex:1,
-    backgroundColor:'#343434'
+    flex:1
   }
 });

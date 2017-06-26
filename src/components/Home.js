@@ -147,7 +147,7 @@ const styles = StyleSheet.create({
   shadow: {
     opacity:0.5,
     backgroundColor:'#000',
-    top:25,
+    top:0,
     left:0,
     width,
     height,

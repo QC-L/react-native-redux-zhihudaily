@@ -31,6 +31,6 @@ export default class CustomBackTitle extends Component {
 let styles = StyleSheet.create({
   toolbar: {
     backgroundColor: '#00a2ed',
-    height: 50
+    height: 44
   }
 });

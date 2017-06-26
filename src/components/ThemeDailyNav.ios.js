@@ -21,11 +21,11 @@ export default class ThemeDailyNav extends Component {
     let theme = new Theme(this.props.zhihu.theme);
     let styles = StyleSheet.create({
       statusBar: {
-        backgroundColor: theme.colors.statusBar
+        backgroundColor: theme.colors.titleBar
       },
       navBar: {
         backgroundColor: theme.colors.titleBar,
-        height: 50,
+        height: 44,
         paddingLeft: 15
       },
       title: {
@@ -36,8 +36,11 @@ export default class ThemeDailyNav extends Component {
         color: '#rgba(255, 255, 255, 1)'
       },
       navButton:{
-        marginTop: 20,
+        marginTop: 10,
         flex: 1
+      },
+      navButtonIcon: {
+        marginTop: 10
       },
       icon:{
         width:30,
@@ -55,7 +58,7 @@ export default class ThemeDailyNav extends Component {
           {this.props.zhihu.themeDaily.name}
         </NavTitle>
         <NavGroup>
-          <NavButton style={styles.navButton}>
+          <NavButton style={styles.navButtonIcon}>
             <NavButtonText style={styles.buttonText}>
               <Image style={styles.icon} source={require('../img/theme_add.png')} resizeMode={'contain'}/>
             </NavButtonText>

@@ -13,14 +13,14 @@ export default class CustomBackTitle extends Component {
       },
       navBar: {
         backgroundColor: theme.colors.titleBar,
-        height: 50,
+        height: 44,
         paddingLeft: 15
       },
       buttonText: {
         color: '#rgba(255, 255, 255, 1)'
       },
       navButton:{
-        marginTop: 20,
+        marginTop: 10,
         flex: 1
       },
       icon:{
